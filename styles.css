@@ -265,7 +265,7 @@ img {
   position: absolute;
   top: 0;
   right: -72px;
-  width: 883px;
+  width: 609px;
   height: 936px;
   object-fit: contain;
   mix-blend-mode: multiply;
@@ -487,14 +487,89 @@ img {
   object-position: center;
 }
 
-.universe-bubbles {
+.universe-bubble {
   position: absolute;
-  left: 360px;
+  z-index: 2;
+}
+
+.bubble-art {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.bubble-layer {
+  position: absolute;
+  display: block;
+  max-width: none;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.bubble-vector {
+  inset: 0;
+  opacity: 1;
+}
+
+.bubble-sticker {
+  left: 602px;
+  top: 199px;
+  width: 138px;
+  height: 111px;
+}
+
+.bubble-game {
+  left: 392px;
   top: 205px;
-  width: 491px;
-  height: 438px;
-  object-fit: contain;
-  mix-blend-mode: multiply;
+  width: 154px;
+  height: 120px;
+}
+
+.bubble-taste {
+  left: 430px;
+  top: 372px;
+  width: 138px;
+  height: 105px;
+}
+
+.bubble-blindbox {
+  left: 634px;
+  top: 436px;
+  width: 108px;
+  height: 114px;
+}
+
+.bubble-label {
+  position: absolute;
+  right: -45px;
+  bottom: 22px;
+  z-index: 3;
+  min-width: 54px;
+  padding: 5px 7px;
+  border-radius: 999px;
+  background: rgba(255, 216, 178, 0.92);
+  color: #b84f08;
+  font-size: 12px;
+  line-height: 17px;
+  text-align: center;
+  white-space: nowrap;
+  box-shadow: 0 8px 16px rgba(145, 67, 18, 0.12);
+}
+
+.bubble-sticker .bubble-label {
+  right: -58px;
+  bottom: 20px;
+}
+
+.bubble-taste .bubble-label {
+  right: -58px;
+  bottom: 12px;
+}
+
+.bubble-blindbox .bubble-label {
+  right: -58px;
+  bottom: 24px;
 }
 
 .more-panel .panel-title {
@@ -503,17 +578,105 @@ img {
 
 .phone-collage {
   position: absolute;
-  left: 63px;
-  top: 190px;
-  width: 498px;
-  height: 439px;
+  left: 50%;
+  top: 198px;
+  width: 508px;
+  height: 380px;
+  transform: translateX(-50%);
 }
 
-.more-mockups {
+.mock-phone {
+  position: absolute;
+  width: 150px;
+  height: 148px;
+  overflow: visible;
+}
+
+.mock-phone-device {
+  position: absolute;
+  left: 46px;
+  top: 12px;
+  width: 78px;
+  height: 146px;
+  padding: 4px;
+  border: 5px solid #111613;
+  border-radius: 17px;
+  background: #111613;
+  box-shadow:
+    18px 22px 18px rgba(72, 50, 28, 0.18),
+    -3px 3px 0 #93c5a6,
+    3px -2px 0 rgba(255, 255, 255, 0.22) inset;
+  transform: rotate(-30deg) skewX(-4deg) scaleY(0.9);
+  transform-origin: center;
+}
+
+.mock-phone-device::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 5px;
+  left: 50%;
+  width: 28px;
+  height: 5px;
+  border-radius: 999px;
+  background: #050505;
+  transform: translateX(-50%);
+}
+
+.mock-phone-screen {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  mix-blend-mode: multiply;
+  border-radius: 12px;
+  background: #fff6ee;
+  overflow: hidden;
+}
+
+.mock-phone-screen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mock-phone-a {
+  left: 14px;
+  top: 144px;
+  z-index: 2;
+}
+
+.mock-phone-b {
+  left: 118px;
+  top: 42px;
+  z-index: 5;
+}
+
+.mock-phone-c {
+  left: 260px;
+  top: 38px;
+  z-index: 4;
+}
+
+.mock-phone-d {
+  left: 370px;
+  top: 118px;
+  z-index: 5;
+}
+
+.mock-phone-e {
+  left: 190px;
+  top: 148px;
+  z-index: 7;
+}
+
+.mock-phone-f {
+  left: 82px;
+  top: 254px;
+  z-index: 3;
+}
+
+.mock-phone-g {
+  left: 292px;
+  top: 250px;
+  z-index: 3;
 }
 
 .download-cta {
@@ -628,6 +791,150 @@ img {
   line-height: 28px;
 }
 
+.legal-page {
+  min-height: 100vh;
+  background:
+    linear-gradient(180deg, rgba(255, 246, 238, 0.92) 0%, rgba(254, 252, 251, 0.98) 420px),
+    url("assets/bg-hero.png") center top / cover no-repeat;
+}
+
+.legal-shell {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 32px 24px 72px;
+}
+
+.legal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.legal-brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #111111;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.legal-brand img {
+  width: 52px;
+  height: 58px;
+  object-fit: contain;
+}
+
+.legal-nav {
+  display: flex;
+  align-items: center;
+  gap: 38px;
+  color: #373737;
+  font-size: 18px;
+  line-height: 26px;
+  white-space: nowrap;
+}
+
+.legal-nav a {
+  padding: 8px 0;
+}
+
+.legal-nav .active {
+  color: var(--orange);
+}
+
+.legal-document {
+  margin-top: 58px;
+  padding: 58px 72px 68px;
+  border: 1px solid #eadfd6;
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 28px 70px rgba(104, 70, 42, 0.12);
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.back-home {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 0 22px;
+  border-radius: 999px;
+  background: var(--chip);
+  color: #5e5953;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.legal-kicker {
+  margin: 34px 0 0;
+  color: var(--orange);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0;
+}
+
+.legal-document h1 {
+  margin: 8px 0 0;
+  color: var(--ink);
+  font-size: 48px;
+  line-height: 1.22;
+  overflow-wrap: anywhere;
+}
+
+.legal-title-line {
+  display: inline;
+}
+
+.legal-title-line + .legal-title-line::before {
+  content: " ";
+}
+
+.legal-updated {
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.legal-content {
+  margin-top: 46px;
+  color: #4a4742;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 2;
+}
+
+.legal-content h2 {
+  margin: 46px 0 14px;
+  padding-top: 22px;
+  border-top: 1px solid #f0e5dc;
+  color: #242424;
+  font-size: 28px;
+  line-height: 1.45;
+}
+
+.legal-content h2:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.legal-content h3 {
+  margin: 28px 0 8px;
+  color: #333333;
+  font-size: 20px;
+  line-height: 1.55;
+}
+
+.legal-content p {
+  margin: 10px 0;
+  overflow-wrap: anywhere;
+  line-break: anywhere;
+}
+
 @media (max-width: 1600px) {
   :root {
     --content: min(1240px, calc(100vw - 64px));
@@ -664,6 +971,86 @@ img {
     grid-template-columns: minmax(0, 1.42fr) minmax(0, 0.96fr);
   }
 
+  .universe-bubble {
+    transform: scale(0.86);
+    transform-origin: top left;
+  }
+
+  .bubble-game {
+    left: clamp(330px, 54%, 390px);
+    top: 205px;
+  }
+
+  .bubble-sticker {
+    left: auto;
+    right: 28px;
+    top: 199px;
+    transform-origin: top right;
+  }
+
+  .bubble-taste {
+    left: clamp(365px, 58%, 420px);
+    top: 372px;
+  }
+
+  .bubble-blindbox {
+    left: auto;
+    right: 56px;
+    top: 436px;
+    transform-origin: top right;
+  }
+
+  .bubble-sticker .bubble-label,
+  .bubble-blindbox .bubble-label {
+    right: 4px;
+  }
+
+  .phone-collage {
+    top: 196px;
+    width: min(92%, 470px);
+    height: 360px;
+  }
+
+  .mock-phone {
+    width: 138px;
+    height: 136px;
+  }
+
+  .mock-phone-a {
+    left: 6px;
+    top: 136px;
+  }
+
+  .mock-phone-b {
+    left: 100px;
+    top: 42px;
+  }
+
+  .mock-phone-c {
+    left: 224px;
+    top: 38px;
+  }
+
+  .mock-phone-d {
+    left: 320px;
+    top: 112px;
+  }
+
+  .mock-phone-e {
+    left: 166px;
+    top: 140px;
+  }
+
+  .mock-phone-f {
+    left: 70px;
+    top: 236px;
+  }
+
+  .mock-phone-g {
+    left: 252px;
+    top: 232px;
+  }
+
   .download-cta {
     grid-template-columns: 1fr 500px;
     padding-left: 80px;
@@ -676,6 +1063,10 @@ img {
 
   .site-footer nav {
     gap: 80px;
+  }
+
+  .legal-document {
+    padding: 52px 56px 62px;
   }
 }
 
@@ -744,7 +1135,7 @@ img {
 
   .hero-phone-complete {
     right: -52px;
-    width: 700px;
+    width: 482px;
     height: auto;
   }
 
@@ -797,6 +1188,41 @@ img {
     min-height: 610px;
   }
 
+  .universe-bubble {
+    transform: scale(0.88);
+    transform-origin: top left;
+  }
+
+  .bubble-game {
+    left: clamp(320px, 47%, 392px);
+    top: 205px;
+  }
+
+  .bubble-sticker {
+    left: auto;
+    right: clamp(64px, 11%, 150px);
+    top: 199px;
+    transform-origin: top right;
+  }
+
+  .bubble-taste {
+    left: clamp(348px, 52%, 430px);
+    top: 372px;
+  }
+
+  .bubble-blindbox {
+    left: auto;
+    right: clamp(90px, 17%, 205px);
+    top: 436px;
+    transform-origin: top right;
+  }
+
+  .bubble-sticker .bubble-label,
+  .bubble-blindbox .bubble-label {
+    right: 4px;
+    left: auto;
+  }
+
   .more-panel {
     min-height: 560px;
   }
@@ -825,6 +1251,27 @@ img {
   .footer-brand,
   .site-footer nav {
     justify-content: center;
+  }
+
+  .legal-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .legal-nav {
+    width: 100%;
+    gap: 24px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+
+  .legal-document {
+    margin-top: 34px;
+    padding: 42px 38px 52px;
+  }
+
+  .legal-document h1 {
+    font-size: 38px;
   }
 }
 
@@ -953,7 +1400,7 @@ img {
   .hero-phone-complete {
     top: -4px;
     right: -132px;
-    width: 500px;
+    width: 344px;
   }
 
   .phone-hero {
@@ -1079,44 +1526,48 @@ img {
     height: 242px;
   }
 
-  .universe-bubbles {
-    top: 145px;
-    right: -16px;
+  .universe-bubble {
+    transform: scale(0.68);
+    transform-origin: top left;
+  }
+
+  .bubble-game {
+    left: clamp(136px, 40%, 154px);
+    top: 152px;
+  }
+
+  .bubble-sticker {
     left: auto;
-    width: min(78vw, 340px);
-    height: auto;
+    right: 42px;
+    top: 188px;
+    transform-origin: top right;
   }
 
-  .planet-bubble {
-    width: 112px;
-    height: 86px;
+  .bubble-taste {
+    left: clamp(142px, 44%, 172px);
+    top: 300px;
   }
 
-  .planet-bubble span {
-    right: -8px;
-    bottom: 8px;
+  .bubble-blindbox {
+    left: auto;
+    right: 54px;
+    top: 348px;
+    transform-origin: top right;
+  }
+
+  .bubble-label {
+    right: -34px;
+    bottom: 14px;
+    min-width: 46px;
+    padding: 4px 6px;
     font-size: 10px;
     line-height: 14px;
   }
 
-  .bubble-one {
-    left: 150px;
-    top: 170px;
-  }
-
-  .bubble-two {
-    left: 260px;
-    top: 194px;
-  }
-
-  .bubble-three {
-    left: 174px;
-    top: 304px;
-  }
-
-  .bubble-four {
-    left: 272px;
-    top: 350px;
+  .bubble-sticker .bubble-label,
+  .bubble-blindbox .bubble-label {
+    right: auto;
+    left: -44px;
   }
 
   .more-panel {
@@ -1125,47 +1576,68 @@ img {
 
   .phone-collage {
     top: 138px;
-    width: min(88vw, 360px);
-    height: auto;
+    width: min(88vw, 340px);
+    height: 292px;
   }
 
-  .more-mockups {
-    height: auto;
+  .mock-phone {
+    width: 96px;
+    height: 94px;
   }
 
-  .phone-a {
+  .mock-phone-device {
+    left: 30px;
+    top: 8px;
+    width: 54px;
+    height: 102px;
+    padding: 3px;
+    border-width: 4px;
+    border-radius: 13px;
+  }
+
+  .mock-phone-device::before {
+    top: 4px;
+    width: 19px;
+    height: 4px;
+  }
+
+  .mock-phone-screen {
+    border-radius: 8px;
+  }
+
+  .mock-phone-a {
     left: 0;
-    top: 70px;
+    top: 114px;
   }
 
-  .phone-b {
-    left: 64px;
-    top: 0;
+  .mock-phone-b {
+    left: 66px;
+    top: 36px;
   }
 
-  .phone-c {
-    left: 175px;
-    top: 18px;
+  .mock-phone-c {
+    left: 154px;
+    top: 32px;
   }
 
-  .phone-d {
-    left: 183px;
-    top: 111px;
+  .mock-phone-d {
+    left: 236px;
+    top: 92px;
   }
 
-  .phone-e {
-    left: 105px;
-    top: 90px;
+  .mock-phone-e {
+    left: 118px;
+    top: 126px;
   }
 
-  .phone-f {
-    left: 34px;
-    top: 165px;
+  .mock-phone-f {
+    left: 46px;
+    top: 204px;
   }
 
-  .phone-g {
-    left: 158px;
-    top: 178px;
+  .mock-phone-g {
+    left: 188px;
+    top: 200px;
   }
 
   .download-cta {
@@ -1252,6 +1724,91 @@ img {
   .site-footer nav {
     gap: 36px;
   }
+
+  .legal-shell {
+    max-width: 520px;
+    padding: 18px 16px 48px;
+  }
+
+  .legal-brand {
+    gap: 12px;
+    font-size: 20px;
+  }
+
+  .legal-brand img {
+    width: 48px;
+    height: 54px;
+  }
+
+  .legal-nav {
+    gap: 20px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .legal-document {
+    margin-top: 26px;
+    width: calc(100vw - 32px);
+    padding: 28px 18px 36px;
+    border-radius: 20px;
+  }
+
+  .back-home {
+    min-height: 38px;
+    padding: 0 18px;
+    font-size: 14px;
+  }
+
+  .legal-kicker {
+    margin-top: 26px;
+    font-size: 14px;
+  }
+
+  .legal-document h1 {
+    max-width: calc(100vw - 72px);
+    font-size: 30px;
+    line-height: 1.28;
+  }
+
+  .legal-title-line {
+    display: block;
+  }
+
+  .legal-title-line + .legal-title-line::before {
+    content: "";
+  }
+
+  .legal-updated {
+    max-width: calc(100vw - 72px);
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .legal-content {
+    width: calc(100vw - 104px);
+    max-width: 100%;
+    margin-top: 30px;
+    font-size: 15px;
+    line-height: 1.85;
+    word-break: break-all;
+  }
+
+  .legal-content p,
+  .legal-content h2,
+  .legal-content h3 {
+    max-width: 100%;
+  }
+
+  .legal-content h2 {
+    margin-top: 34px;
+    padding-top: 18px;
+    font-size: 22px;
+  }
+
+  .legal-content h3 {
+    margin-top: 24px;
+    font-size: 17px;
+  }
 }
 
 @media (max-width: 420px) {
@@ -1277,12 +1834,77 @@ img {
 
   .hero-phone-complete {
     right: -150px;
-    width: 462px;
+    width: 318px;
   }
 
-  .bubble-two,
-  .bubble-four {
-    left: 238px;
+  .bubble-game {
+    left: clamp(126px, 39%, 146px);
+  }
+
+  .bubble-sticker {
+    left: auto;
+    right: 28px;
+  }
+
+  .bubble-taste {
+    left: clamp(138px, 42%, 164px);
+  }
+
+  .bubble-blindbox {
+    left: auto;
+    right: 34px;
+  }
+
+  .phone-collage {
+    width: min(88vw, 288px);
+    height: 258px;
+  }
+
+  .mock-phone {
+    width: 82px;
+    height: 82px;
+  }
+
+  .mock-phone-device {
+    left: 25px;
+    top: 7px;
+    width: 48px;
+    height: 90px;
+  }
+
+  .mock-phone-a {
+    left: 0;
+    top: 104px;
+  }
+
+  .mock-phone-b {
+    left: 52px;
+    top: 34px;
+  }
+
+  .mock-phone-c {
+    left: 126px;
+    top: 30px;
+  }
+
+  .mock-phone-d {
+    left: 196px;
+    top: 82px;
+  }
+
+  .mock-phone-e {
+    left: 96px;
+    top: 112px;
+  }
+
+  .mock-phone-f {
+    left: 38px;
+    top: 184px;
+  }
+
+  .mock-phone-g {
+    left: 156px;
+    top: 180px;
   }
 
   .cta-downloads {
